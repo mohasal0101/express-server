@@ -14,9 +14,10 @@ describe('API server', () => {
   it( 'Person', async () => {
     const res = await request.post( '/person' ).query( {
         name: 'salah', 
+        age: 25,
         gender: 'male'
     } );
     expect( res.status ).toEqual( 200 );
-    expect( res.text ).toEqual( '22' );
+    expect( res.text ).toEqual( '30' );
 });
 })
